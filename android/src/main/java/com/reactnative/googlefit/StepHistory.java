@@ -11,8 +11,8 @@
 
 package com.reactnative.googlefit;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.util.Log;
 
 import com.facebook.react.bridge.Arguments;
@@ -103,15 +103,15 @@ public class StepHistory {
 
         List<DataSource> dataSources = new ArrayList<>();
 
-        // GoogleFit Apps
-        dataSources.add(
-            new DataSource.Builder()
-                .setAppPackageName("com.google.android.gms")
-                .setDataType(DataType.TYPE_STEP_COUNT_DELTA)
-                .setType(DataSource.TYPE_DERIVED)
-                .setStreamName("estimated_steps")
-                .build()
-        );
+        // // GoogleFit Apps
+        // dataSources.add(
+        //     new DataSource.Builder()
+        //         .setAppPackageName("com.google.android.gms")
+        //         .setDataType(DataType.TYPE_STEP_COUNT_DELTA)
+        //         .setType(DataSource.TYPE_DERIVED)
+        //         .setStreamName("estimated_steps")
+        //         .build()
+        // );
 
         // GoogleFit Apps
         dataSources.add(
@@ -123,15 +123,15 @@ public class StepHistory {
                 .build()
         );
 
-        // Mi Fit
-        dataSources.add(
-            new DataSource.Builder()
-                .setAppPackageName("com.xiaomi.hm.health")
-                .setDataType(DataType.TYPE_STEP_COUNT_DELTA)
-                .setType(DataSource.TYPE_RAW)
-                .setStreamName("")
-                .build()
-        );
+        // // Mi Fit
+        // dataSources.add(
+        //     new DataSource.Builder()
+        //         .setAppPackageName("com.xiaomi.hm.health")
+        //         .setDataType(DataType.TYPE_STEP_COUNT_DELTA)
+        //         .setType(DataSource.TYPE_RAW)
+        //         .setStreamName("")
+        //         .build()
+        // );
 
         /*
         DataSourcesRequest sourceRequest = new DataSourcesRequest.Builder()

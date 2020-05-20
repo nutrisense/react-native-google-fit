@@ -15,3 +15,6 @@ android/gradlew*
 android/local.properties
 *.iml
 yarn.lock
+
+.history
+.vscode

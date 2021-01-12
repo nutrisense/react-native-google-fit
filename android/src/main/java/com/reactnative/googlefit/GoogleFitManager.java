@@ -160,6 +160,10 @@ public class GoogleFitManager implements
                             @Override
                             public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
                                 Log.i(TAG, "Authorization - Failed Authorization Mgr:" + connectionResult);
+                                if (mActivity == null) {
+                                    Log.i(TAG, "Ignoring attempt to resolve connection result without an active Activity.");
+                                    return;
+                                }
                                 if (mAuthInProgress) {
                                     Log.i(TAG, "Authorization - Already attempting to resolve an error.");
                                 } else if (connectionResult.hasResolution()) {
